@@ -5,16 +5,16 @@
 
 | 阶段 | 任务 | 状态 | 目的 | 操作/路径/命令 | 备注 |
 |---|---|---|---|---|---|
-| 系统 | 更新 Windows 至 22H2/23H2+ | [ X ] | 兼容 WSL2/驱动 | 设置 → Windows 更新 | 重启 |
+| 系统 | 更新 Windows 至 22H2/23H2+ | [X] | 兼容 WSL2/驱动 | 设置 → Windows 更新 | 重启 |
 | 显卡 | 安装 NVIDIA Studio/游戏就绪驱动 | [X ] | CUDA 与容器 GPU | 从 NVIDIA 官网安装 | 建议最新稳定版 |
-| 虚拟化 | 确认已开启虚拟化 | [ X] | 保障 WSL2 | 任务管理器 → 性能 → 虚拟化 已启用 | 如未启用需进 BIOS 开 VT-x/AMD-V |
-| WSL 引擎 | 安装 WSL 组件 | [ ] | 后续安装 Linux | 以管理员 PowerShell: wsl --install | 默认 Ubuntu LTS |
-| Docker | 安装 Docker Desktop | [ ] | 容器运行时（GPU 主力） | 下载并安装 Docker Desktop | 社区版可用 |
-| Docker 集成 | 启用 WSL2 引擎与 Ubuntu 集成 | [ ] | 让 Docker 使用 WSL2 后端 | Docker Desktop Settings: Use WSL 2 engine；Resources > WSL Integration 勾选 Ubuntu | 必做 |
-| NCT | NVIDIA Container Toolkit for Docker | [ ] | 容器内使用 GPU | 参考 NVIDIA 官方 WSL2 指南 | 关键步骤 |
-| 验证 | GPU 容器验证 | [ ] | 确认直通 | 在 PowerShell 或 WSL: docker run --gpus all --rm nvidia/cuda:12.3.2-runtime-ubuntu22.04 nvidia-smi | 能显示 GPU 即成功 |
-| Python | 安装 Miniconda/Mambaforge（Windows） | [ ] | 本机 Python 开发 | 下载 Windows 版安装 | 或用 uv/pyenv-win |
-| Env | 创建 Windows 虚拟环境 | [ ] | 依赖隔离 | conda create -n win-ai python=3.11 && conda activate win-ai | 可与 WSL 分离 |
+| 虚拟化 | 确认已开启虚拟化 | [X] | 保障 WSL2 | 任务管理器 → 性能 → 虚拟化 已启用 | 如未启用需进 BIOS 开 VT-x/AMD-V |
+| WSL 引擎 | 安装 WSL 组件 | [X ] | 后续安装 Linux | 以管理员 PowerShell: wsl --install | 默认 Ubuntu LTS |
+| Docker | 安装 Docker Desktop | [X] | 容器运行时（GPU 主力） | 下载并安装 Docker Desktop | 社区版可用 |
+| Docker 集成 | 启用 WSL2 引擎与 Ubuntu 集成 | [X] | 让 Docker 使用 WSL2 后端 | Docker Desktop Settings: Use WSL 2 engine；Resources > WSL Integration 勾选 Ubuntu | 必做 |
+| NCT | NVIDIA Container Toolkit for Docker | [X] | 容器内使用 GPU | 参考 NVIDIA 官方 WSL2 指南 | 关键步骤 |
+| 验证 | GPU 容器验证 | [X] | 确认直通 | 在 PowerShell 或 WSL: docker run --gpus all --rm nvidia/cuda:12.3.2-runtime-ubuntu22.04 nvidia-smi | 能显示 GPU 即成功 |
+| Python | 安装 Miniconda/Mambaforge（Windows） | [X] | 本机 Python 开发 | 下载 Windows 版安装 | 或用 uv/pyenv-win |
+| Env | 创建 Windows 虚拟环境 | [X] | 依赖隔离 | conda create -n win-ai python=3.11 && conda activate win-ai | 可与 WSL 分离 |
 | PyTorch | 安装带 CUDA 的 PyTorch（Windows） | [ ] | 本机开发/推理 | 按 PyTorch 官网选择命令 | 版本要与 CUDA 轮子匹配 |
 | VS Code | 安装 VS Code | [ ] | IDE | 下载 VS Code | Windows 侧开发 |
 | 扩展 | 安装 Python、Docker、Dev Containers 扩展 | [ ] | 构建开发容器/调试 | VS Code 扩展市场 | 与 Docker Desktop 配合 |
