@@ -23,3 +23,6 @@ Setup Windows11 Dev Environment for AI Dev and Fullstack Dev.
 
 - Python: Annocada/Poetry/UV 
 - Typescritp/Javascript:  npm/pnpm/bun/turbo/others
+
+## Linux in WSL11
+
